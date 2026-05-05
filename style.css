@@ -1,0 +1,122 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #1A2B1E;
+    --color-bg-alt: #233628;
+    --color-text: #D1D5DB;
+    --color-heading: #F3F4F6;
+    --color-card: #111827;
+    --color-primary: #9CA3AF;
+    --color-muted: #6B7280;
+    --color-footer: #0B120C;
+    --font-main: 'Montserrat', sans-serif;
+    --radius: 12px;
+    --border: #2D3F33;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: var(--color-heading);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 2.8rem; }
+
+h2 { 
+    font-size: 2.2rem; 
+    border-bottom: 2px solid var(--color-primary); 
+    display: inline-block; 
+    padding-bottom: 5px;
+}
+
+h3 { font-size: 1.5rem; }
+
+p { margin-bottom: 1.2rem; }
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+section {
+    padding: 100px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#about, #contact {
+    background-color: var(--color-bg-alt);
+    max-width: 100%;
+}
+
+#about > *, #contact > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    background-color: var(--color-card);
+    padding: 30px;
+    border-radius: var(--radius);
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-card);
+    padding: 14px 30px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+header {
+    background-color: var(--color-bg);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--color-heading);
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+footer {
+    background-color: var(--color-footer);
+    color: var(--color-muted);
+    text-align: center;
+    padding: 60px 20px;
+}
