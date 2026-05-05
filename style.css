@@ -1,122 +1,210 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 :root {
     --color-bg: #1A2B1E;
     --color-bg-alt: #233628;
     --color-text: #D1D5DB;
-    --color-heading: #F3F4F6;
-    --color-card: #111827;
     --color-primary: #9CA3AF;
-    --color-muted: #6B7280;
-    --color-footer: #0B120C;
-    --font-main: 'Montserrat', sans-serif;
+    --color-card: #111827;
     --radius: 12px;
-    --border: #2D3F33;
+    --font-main: 'Montserrat', sans-serif;
 }
 
 body {
-    font-family: var(--font-main);
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--color-text);
     background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--color-bg);
+    border-bottom: 1px solid rgba(156, 163, 175, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
     margin: 0;
 }
 
-h1, h2, h3 {
-    color: var(--color-heading);
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-h1 { font-size: 2.8rem; }
-
-h2 { 
-    font-size: 2.2rem; 
-    border-bottom: 2px solid var(--color-primary); 
-    display: inline-block; 
-    padding-bottom: 5px;
-}
-
-h3 { font-size: 1.5rem; }
-
-p { margin-bottom: 1.2rem; }
-
-a {
-    color: var(--color-primary);
+.nav-link {
     text-decoration: none;
-    transition: 0.3s ease;
+    color: var(--color-text);
+    font-weight: 500;
 }
 
-section {
-    padding: 100px 24px;
+/* --- HERO --- */
+#hero {
+    padding: 100px 5%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-#about, #contact {
-    background-color: var(--color-bg-alt);
-    max-width: 100%;
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
 }
 
-#about > *, #contact > * {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.card {
-    background-color: var(--color-card);
-    padding: 30px;
-    border-radius: var(--radius);
-    margin-bottom: 40px;
-    border: 1px solid var(--border);
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: var(--color-card);
-    padding: 14px 30px;
-    border-radius: var(--radius);
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-header {
-    background-color: var(--color-bg);
-    padding: 40px 20px;
+.hero-main {
+    flex: 1;
     text-align: center;
-    border-bottom: 1px solid var(--border);
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: var(--color-heading);
+#hero img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-primary);
     margin-bottom: 20px;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.hero-side-text {
+    flex: 1;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    border-left: 2px solid var(--color-primary);
+    padding-left: 25px;
 }
 
-nav ul li {
-    margin: 10px 0;
+/* --- ЗАГАЛЬНІ КОНТЕЙНЕРИ СЕКЦІЙ --- */
+.section-container {
+    max-width: 900px; /* Однакове обмеження ширини для тексту та списків */
+    margin: 0 auto;
+    text-align: center;
 }
 
-.nav-link {
-    font-weight: 500;
-    color: var(--color-text);
+section {
+    padding: 80px 5%;
+}
+
+#about, #skills {
+    background-color: var(--color-bg-alt);
+}
+
+.center-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- ВИРІВНЮВАННЯ ТЕКСТУ ТА НАВИЧОК --- */
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: left; /* Текст зручніше читати зліва, але сам блок центрований */
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-list {
+    text-align: left;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+
+.skill-item {
+    margin-bottom: 10px;
+}
+
+/* --- PROJECTS (Grid - ширший контейнер) --- */
+#projects .section-container {
+    max-width: 1200px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--color-card);
+    border-radius: var(--radius);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(156, 163, 175, 0.1);
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+/* --- КНОПКИ ТА ФОРМА --- */
+.btn, .btn-card {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    align-self: center; /* Центруємо кнопку в Hero */
+}
+
+.btn-card {
+    align-self: flex-start; /* Кнопки в картках зліва */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-bg-alt);
+    border: 1px solid rgba(156, 163, 175, 0.3);
+    color: white;
+    border-radius: 8px;
+    font-family: inherit;
 }
 
 footer {
-    background-color: var(--color-footer);
-    color: var(--color-muted);
-    text-align: center;
-    padding: 60px 20px;
+    padding: 40px 5%;
+    border-top: 1px solid rgba(156, 163, 175, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }

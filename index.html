@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Наталія Гакман — Портфоліо</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,98 +24,99 @@
     </header>
 
     <main>
-        <!-- ГОЛОВНА СЕКЦІЯ (HERO) -->
         <section id="hero">
-            <img src="images/profile-photo.jpg" alt="Фото Наталії Гакман">
-            <h1>Привіт, я Наталія Гакман</h1>
-            <p>Студентка, яка поєднує інженерну точність та увагу до веб-технологій та мистецтва.</p>
-            <a href="#projects" class="btn">Переглянути мої роботи</a>
+            <div class="hero-container">
+                <div class="hero-main">
+                    <img src="images/profile-photo.jpg" alt="Фото Наталії Гакман">
+                    <h1>Привіт, я Наталія Гакман</h1>
+                    <p>Студентка, яка поєднує інженерну точність із веб-технологіями.</p>
+                    <a href="#projects" class="btn">Переглянути роботи</a>
+                </div>
+                <div class="hero-side-text">
+                    <p>«Для мене інженерія — це не лише схеми, а й мистецтво створювати гармонію в деталях. Код — це інструмент для втілення ідей у життя.»</p>
+                </div>
+            </div>
         </section>
 
-        <!-- ПРО МЕНЕ (ABOUT) -->
         <section id="about">
-            <h2>Про мене</h2>
-            <div class="about-content">
+            <div class="section-container">
+                <h2>Про мене</h2>
                 <div class="about-text">
-                    <p>Я навчаюся у <strong>Чернівецькому національному університеті імені Юрія Федьковича</strong> на спеціальності «Електронні комунікації та радіотехніка». Процес навчання наповнений цінною технічною інформацією, яка є фундаментом для мого професійного зростання.</p>
-                    
-                    <p>Зараз я активно вивчаю веб-технології, зокрема <em>HTML та CSS</em>. Для мене це чудова можливість поєднати технічну точність із творчим підходом до проектування інтерфейсів. Моя мета — навчитися створювати сайти, які будуть не лише функціональними, а й естетичними.</p>
-                    
-                    <p>У вільний час я захоплююся читанням книг про саморозвиток та класичної літератури. Також я обожнюю тривалі прогулянки, під час яких спостерігаю за рухом природи. Фотографія дозволяє мені зупинити ці миті, створюючи цікаві знімки.</p>
+                    <p>Я навчаюся у <strong>Чернівецькому національному університеті імені Юрія Федьковича</strong> на спеціальності «Електронні комунікації та радіотехніка». Процес навчання наповнений технічною інформацією, яка є фундаментом мого зростання.</p>
+                    <p>Зараз я активно вивчаю <em>HTML та CSS</em>. Моя мета — поєднати інженерну точність із творчим підходом до проектування інтерфейсів.</p>
+                    <p>У вільний час я захоплююся читанням книг та фотографією, що дозволяє мені зупинити миті та знайти натхнення у природі.</p>
                 </div>
             </div>
         </section>
 
-        <!-- НАВИЧКИ (SKILLS) -->
         <section id="skills">
-            <h2>Навички</h2>
-            <div class="skills-list">
-                <ul>
-                    <li class="skill-item">Основи радіотехніки та електронних комунікацій</li>
-                    <li class="skill-item">Робота з технічною документацією та схемами</li>
-                    <li class="skill-item">Семантична верстка веб-сторінок (HTML5/CSS3)</li>
-                    <li class="skill-item">Робота з Git та контроль версій у GitHub</li>
-                    <li class="skill-item">Цифрова фотографія та побудова композиції</li>
-                    <li class="skill-item">Аналітичне мислення та пошук інформації</li>
-                </ul>
+            <div class="section-container">
+                <h2>Навички</h2>
+                <div class="skills-wrapper">
+                    <ul class="skills-list">
+                        <li class="skill-item">Основи радіотехніки та електронних комунікацій</li>
+                        <li class="skill-item">Робота з технічною документацією та схемами</li>
+                        <li class="skill-item">Семантична верстка веб-сторінок (HTML5/CSS3)</li>
+                        <li class="skill-item">Робота з Git та контроль версій у GitHub</li>
+                        <li class="skill-item">Цифрова фотографія та побудова композиції</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <!-- ПРОЄКТИ (PROJECTS) -->
         <section id="projects">
-            <h2>Мої проєкти та захоплення</h2>
-            <div class="projects-grid">
-                
-                <article class="card">
-                    <img src="images/project-1.jpg" alt="Книжкова полиця">
-                    <div class="card-body">
-                        <h3>Книжковий щоденник</h3>
-                        <p><strong>«Клієнтська аналітика»</strong> — вивчення методів аналізу даних для розуміння потреб аудиторії та структурування бізнес-процесів.</p>
-                        <p><strong>«Психотерапевтичні етюди»</strong> — дослідження психології, що сприяє глибшому розумінню поведінки та взаємодії людей.</p>
-                        <p><strong>«Світло та композиція»</strong> — вивчення фундаментальних правил побудови кадру, роботи з експозицією та візуального сприйняття об'єктів, що допомагає мені і у веб-дизайні.</p>
-                        <a href="#" class="btn" target="_blank">Читати огляди</a>
-                    </div>
-                </article>
+            <div class="section-container">
+                <h2 class="center-title">Мої проєкти та захоплення</h2>
+                <div class="projects-grid">
+                    <article class="card">
+                        <img src="images/project-2.jpg" alt="Робота з осцилографом">
+                        <div class="card-body">
+                            <h3>Техніка — інструмент інженера</h3>
+                            <p>Дослідження та аналіз сигналів за допомогою цифрового осцилографа Tektronix. Практичне застосування знань у лабораторних умовах.</p>
+                            <a href="#" class="btn-card">Деталі роботи</a>
+                        </div>
+                    </article>
 
-                <article class="card">
-                    <img src="images/project-2.jpg" alt="Робота з осцилографом Tektronix">
-                    <div class="card-body">
-                        <h3>Естетика техніки</h3>
-                        <p>Дослідження сигналів за допомогою цифрового осцилографа <strong>Tektronix</strong>. Практичне застосування інженерних знань у лабораторних умовах для аналізу складних систем.</p>
-                        <a href="#" class="btn" target="_blank">Деталі роботи</a>
-                    </div>
-                </article>
+                    <article class="card">
+                        <img src="images/project-1.jpg" alt="Книжкова полиця">
+                        <div class="card-body">
+                            <h3>Книжковий щоденник</h3>
+                            <p>Колекція творів від класичної літератури до книг із саморозвитку. Аналіз текстів, що розвивають критичне та творче мислення.</p>
+                            <a href="#" class="btn-card">Читати огляди</a>
+                        </div>
+                    </article>
 
-                <article class="card">
-                    <img src="images/project-3.jpg" alt="Осінній пейзаж Чернівців">
-                    <div class="card-body">
-                        <h3>Атмосферні прогулянки</h3>
-                        <p>Фіксація природної гармонії через об'єктив камери. Це хобі розвиває моє відчуття композиції, що є важливим для проектування естетичних веб-інтерфейсів.</p>
-                        <a href="#" class="btn" target="_blank">Переглянути галерею</a>
-                    </div>
-                </article>
-
+                    <article class="card">
+                        <img src="images/project-3.jpg" alt="Осінній пейзаж">
+                        <div class="card-body">
+                            <h3>Атмосферні прогулянки</h3>
+                            <p>Спостереження за природою та архітектурою. Кожна прогулянка — це нове натхнення для фотографій та творчості.</p>
+                            <a href="#" class="btn-card">Переглянути галерею</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <!-- КОНТАКТИ (CONTACT) -->
         <section id="contact">
-            <h2>Зв'язатися зі мною</h2>
-            <form>
-                <div class="form-group">
-                    <label for="name">Ваше ім'я</label>
-                    <input type="text" id="name" name="name" required placeholder="Іван Іваненко">
-                </div>
-                <div class="form-group">
-                    <label for="email">Електронна пошта</label>
-                    <input type="email" id="email" name="email" required placeholder="ivan@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="message">Ваше повідомлення</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Про що хочете написати?"></textarea>
-                </div>
-                <button type="submit" class="btn">Надіслати</button>
-            </form>
+            <div class="section-container">
+                <h2>Зв'язатися зі мною</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Ваше ім'я</label>
+                        <input type="text" id="name" name="name" required placeholder="Іван Іваненко">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Електронна пошта</label>
+                        <input type="email" id="email" name="email" required placeholder="ivan@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Ваше повідомлення</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Про що хочете написати?"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Надіслати</button>
+                </form>
+            </div>
         </section>
     </main>
 
