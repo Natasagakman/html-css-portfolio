@@ -1,3 +1,4 @@
+/* ── ГЛОБАЛЬНІ НАЛАШТУВАННЯ ── */
 :root {
     --color-bg: #1A2B1E;
     --color-bg-alt: #233628;
@@ -16,6 +17,7 @@ body {
     line-height: 1.6;
 }
 
+/* ── ШАПКА ТА НАВІГАЦІЯ (Flexbox) ── */
 header {
     display: flex;
     justify-content: space-between;
@@ -41,7 +43,7 @@ nav ul {
     font-weight: 500;
 }
 
-/* --- HERO --- */
+/* ── HERO СЕКЦІЯ (Flexbox) ── */
 #hero {
     padding: 100px 5%;
     max-width: 1200px;
@@ -78,15 +80,15 @@ nav ul {
     padding-left: 25px;
 }
 
-/* --- ЗАГАЛЬНІ КОНТЕЙНЕРИ СЕКЦІЙ --- */
-.section-container {
-    max-width: 900px; /* Однакове обмеження ширини для тексту та списків */
-    margin: 0 auto;
-    text-align: center;
-}
-
+/* ── ЗАГАЛЬНІ КОНТЕЙНЕРИ ── */
 section {
     padding: 80px 5%;
+}
+
+.section-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #about, #skills {
@@ -98,11 +100,10 @@ section {
     margin-bottom: 40px;
 }
 
-/* --- ВИРІВНЮВАННЯ ТЕКСТУ ТА НАВИЧОК --- */
 .about-text p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    text-align: left; /* Текст зручніше читати зліва, але сам блок центрований */
+    text-align: left;
 }
 
 .skills-wrapper {
@@ -120,7 +121,7 @@ section {
     margin-bottom: 10px;
 }
 
-/* --- PROJECTS (Grid - ширший контейнер) --- */
+/* ── ПРОЄКТИ (Grid) ── */
 #projects .section-container {
     max-width: 1200px;
 }
@@ -160,7 +161,7 @@ section {
     margin-bottom: 20px;
 }
 
-/* --- КНОПКИ ТА ФОРМА --- */
+/* ── КНОПКИ ТА ФОРМА (Вимога ЛР 5) ── */
 .btn, .btn-card {
     display: inline-block;
     padding: 12px 25px;
@@ -170,11 +171,7 @@ section {
     text-decoration: none;
     font-weight: bold;
     text-align: center;
-    align-self: center; /* Центруємо кнопку в Hero */
-}
-
-.btn-card {
-    align-self: flex-start; /* Кнопки в картках зліва */
+    border: none;
 }
 
 .contact-form {
@@ -186,16 +183,24 @@ section {
     text-align: left;
 }
 
-.form-group input, .form-group textarea {
+input, textarea {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     background: var(--color-bg-alt);
-    border: 1px solid rgba(156, 163, 175, 0.3);
+    border: 2px solid rgba(156, 163, 175, 0.2);
     color: white;
     border-radius: 8px;
     font-family: inherit;
+    outline: none;
+    transition: 0.3s;
 }
 
+input:focus, textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(156, 163, 175, 0.1);
+}
+
+/* ── ФУТЕР ── */
 footer {
     padding: 40px 5%;
     border-top: 1px solid rgba(156, 163, 175, 0.1);
@@ -207,4 +212,56 @@ footer {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* ── АДАПТИВНІСТЬ (Media Queries - ЛР 5) ── */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-side-text {
+        border-left: none;
+        border-top: 2px solid var(--color-primary);
+        padding: 20px 0 0 0;
+    }
+
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 180px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .btn, .contact-form .btn {
+        width: 100%;
+    }
 }
